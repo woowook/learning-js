@@ -4,6 +4,6 @@
 import { question } from 'readline-sync';
 
 const name = question('사용자의 이름을 입력하세요 : ');
-// Const output = 'Hello ' + name;
-const output = `Hello ${name}`;
+const output = 'Hello ' + name;
+// Const output = `Hello ${name}`;
 console.log(output);
