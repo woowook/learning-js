@@ -3,10 +3,10 @@
 
 import { question } from 'readline-sync';
 
-const number = question('50 미만의 숫자를 입력하세요 : ');
+const number = Number(question('50 미만의 숫자를 입력하세요 : '));
 
 if (number > 1 && number < 50) {
-  for (let i = 1; i <= number; i++) {
+  for (let i = number; i >= 1; i--) {
     console.log(i);
   }
 } else {

@@ -5,7 +5,7 @@
 
 import { question } from 'readline-sync';
 
-let total = 0;
+// Let total = 0;
 
 // For (let i = 0; i < 5; i++) {
 //   const number = question('숫자를 입력하세요 : ');
@@ -20,11 +20,12 @@ let total = 0;
 //     break;
 //   }
 // }
-
+let total = 0;
 for (let i = 0; i < 5; i++) {
   const number = Number(question('\n숫자를 입력하세요 : '));
   // 입력받은 내용이 숫자인지 판단
-  if (isNaN(number) === false) {
+  // 왜 빨간줄이 그어지는거지?
+  if (Number.isNaN(number) === false) {
     console.log('\n1) 숫자를 더한다.\n2) 숫자를 더하지 않는다');
     const answer = Number(question('숫자를 더하시겠습니까? : '));
     if (answer === 1) {
@@ -42,4 +43,4 @@ for (let i = 0; i < 5; i++) {
   }
 }
 
-console.log(total);
+console.log(`Total = ${total}`);

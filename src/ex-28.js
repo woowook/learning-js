@@ -7,7 +7,7 @@ const number = Number(question('소수점을 포함한 숫자를 입력하세요
 console.log(`소수점 2자리까지 표시(세번째에서 반올림) : ${number.toFixed(2)}`);
 
 // 소수점 2자리까지 표시(버림)
-const temp1 = number * 100;
-const temp2 = Math.floor(temp1);
-const result = temp2 / 100;
+const temporary1 = number * 100;
+const temporary2 = Math.floor(temporary1);
+const result = temporary2 / 100;
 console.log(`소수점 2자리까지 표시(버림) : ${result}`);

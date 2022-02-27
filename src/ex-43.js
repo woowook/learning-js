@@ -24,7 +24,7 @@ const count = Number(question('원하는 카운트의 방향을 입력하세요 
 
 if (count === 1) {
   const maxNumber = question('\n가장 큰 숫자를 입력하세요 : ');
-  if (isNaN(maxNumber) === false) {
+  if (Number.isNaN(maxNumber) === false) {
     if (maxNumber > 0) {
       for (let i = 1; i <= maxNumber; i++) {
         console.log(i);
@@ -37,7 +37,7 @@ if (count === 1) {
   }
 } else if (count === 2) {
   const minNumber = question('\n20 미만의 숫자를 입력하세요 : ');
-  if (isNaN(minNumber) === false) {
+  if (Number.isNaN(minNumber) === false) {
     if (minNumber < 20) {
       for (let j = 20; j >= minNumber; j--) {
         console.log(j);

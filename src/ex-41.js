@@ -11,7 +11,9 @@ if (repeat > 1 && repeat < 10) {
     console.log(name);
   }
 } else if (repeat >= 10) {
-  console.log('Too High');
+  for (let j = 0; j < 3; j++) {
+    console.log('Too High');
+  }
 } else {
   console.log('Too Low');
 }
