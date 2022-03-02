@@ -5,5 +5,5 @@
 // Math.floor() -> 같거나 작은 수 중 가장 큰 정수 반환
 
 // random으로 반환된 숫자를 정수로 변환
-const ran1 = Math.floor(Math.random() * 101);
+const ran1 = Math.floor(Math.random() * 100) + 1;
 console.log(ran1);

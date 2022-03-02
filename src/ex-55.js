@@ -9,7 +9,7 @@
 import { question } from 'readline-sync';
 
 // 1 ~ 5 랜덤 값
-const randSelect = Math.floor(Math.random() * 5 + 1);
+const randSelect = Math.floor(Math.random() * 5) + 1;
 console.log(randSelect);
 
 const userSelect = Number(question('숫자를 입력하세요(1 ~ 5) : '));
@@ -17,7 +17,19 @@ const userSelect = Number(question('숫자를 입력하세요(1 ~ 5) : '));
 if (randSelect === userSelect) {
   console.log('Well done.');
 } else if (randSelect < userSelect) {
-  console.log('선택한 숫자가 너무 높습니다.\n');
+  console.log('선택한 숫자가 너무 높습니다.');
+  const userSelect2 = Number(question('다시 숫자를 입력하세요 : '));
+  if (randSelect === userSelect2) {
+    console.log('Correct');
+  } else {
+    console.log('You lose');
+  }
 } else {
   console.log('선택한 숫자가 너무 낮습니다.');
+  const userSelect2 = Number(question('다시 숫자를 입력하세요 : '));
+  if (randSelect === userSelect2) {
+    console.log('Correct');
+  } else {
+    console.log('You lose');
+  }
 }
