@@ -1,40 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ex-64</title>
-</head>
-<body>
-  <!-- 그림이 그려질 영역 -->
-  <!-- 그래픽을 그리기 위한 수단으로 사용 -->
-  <canvas id = "real-turtle"></canvas>
-  <script src = "https://unpkg.com/real-turtle"></script>
-  <script src = "https://unpkg.com/real-turtle/build/helpers/simple.js"></script>
-  <script>
-    // 여기서 시작
-    // Move around : .forward(px), .back(px), .right(degrees), .left(degrees), .arc(radius, angle, counterclockwise)
-    // Drawing : .penDown(), .penUp(), .beginPath(), .closePath(), .stroke(), .fill(), .fillText(), .strokeText()
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex-64</title>
+  </head>
+  <body>
+    <!-- 그림이 그려질 영역 -->
+    <!-- 그래픽을 그리기 위한 수단으로 사용 -->
+    <canvas id="real-turtle"></canvas>
+    <script src="https://unpkg.com/real-turtle"></script>
+    <script src="https://unpkg.com/real-turtle/build/helpers/simple.js"></script>
+    <script>
+      // 여기서 시작
+      // Move around : .forward(px), .back(px), .right(degrees), .left(degrees), .arc(radius, angle, counterclockwise)
+      // Drawing : .penDown(), .penUp(), .beginPath(), .closePath(), .stroke(), .fill(), .fillText(), .strokeText()
 
       turtle
-    // 다섯개의 꼭지점이 있는 별 모양을 그려라
-      .left(90)
-      .setFillStyle("yellow")
-      .setStrokeColorRGB(255,255,0)
-      .beginPath()
-      for(let i = 0; i < 5; i++){
-       turtle
-        .forward(100)
-        .left(144)
-        .forward(100)
-        .right(72)
+        // 다섯개의 꼭지점이 있는 별 모양을 그려라
+        .left(90)
+        .setFillStyle('yellow')
+        .setStrokeColorRGB(255, 255, 0)
+        .beginPath();
+      for (let i = 0; i < 5; i++) {
+        turtle.forward(100).left(144).forward(100).right(72);
       }
-      turtle
-        .closePath()
-        .fill()
-
+      turtle.closePath().fill();
     </script>
-  
-</body>
+  </body>
 </html>

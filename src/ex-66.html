@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ex-66</title>
-</head>
-<body>
-  <!-- 그림이 그려질 영역 -->
-  <!-- 그래픽을 그리기 위한 수단으로 사용 -->
-  <canvas id = "real-turtle"></canvas>
-  <script src = "https://unpkg.com/real-turtle"></script>
-  <script src = "https://unpkg.com/real-turtle/build/helpers/simple.js"></script>
-  <script>
-    // 여기서 시작
-    turtle
-      .left(90)
-      .setLineWidth(30)
-      .setLineCap("round")
-    for(let i = 0; i < 8; i++){
-      // 일단 그냥 RGB 랜덤으로 8개 선.. (원래는 6개의 색상 목록에서 무작위로 선택해서 그리는거)
-      const setColorNumber1 = Math.floor(Math.random() * 255) + 1;
-      const setColorNumber2 = Math.floor(Math.random() * 255) + 1;
-      const setColorNumber3 = Math.floor(Math.random() * 255) + 1;
-      turtle
-        // .setStrockStyle(color[setColorNumber1])
-        .setStrokeColorRGB(setColorNumber1, setColorNumber2, setColorNumber3)
-        .forward(100)
-        .right(45)
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex-66</title>
+  </head>
+  <body>
+    <!-- 그림이 그려질 영역 -->
+    <!-- 그래픽을 그리기 위한 수단으로 사용 -->
+    <canvas id="real-turtle"></canvas>
+    <script src="https://unpkg.com/real-turtle"></script>
+    <script src="https://unpkg.com/real-turtle/build/helpers/simple.js"></script>
+    <script>
+      // 여기서 시작
+      turtle.left(90).setLineWidth(30).setLineCap('round');
+      // 선 색상 리스트
+      const lineColor = ['black', 'red', 'blue', 'green', 'purple', 'yellow'];
+      for (let i = 0; i < 8; i++) {
+        // 0 ~ 5까지 랜덤
+        const setColorNumber = Math.floor(Math.random() * 6);
+        turtle
+          // .setStrokeColorRGB(setColorNumber1, setColorNumber2, setColorNumber3)
+          // 선 색상 지정(리스트에 있는 것 중 랜덤)
+          .setStrokeStyle(lineColor[setColorNumber])
+          .forward(100)
+          .right(45);
+      }
     </script>
-  
-</body>
+  </body>
 </html>

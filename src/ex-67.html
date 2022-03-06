@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ex-67</title>
-</head>
-<body>
-  <!-- 그림이 그려질 영역 -->
-  <!-- 그래픽을 그리기 위한 수단으로 사용 -->
-  <canvas id = "real-turtle"></canvas>
-  <script src = "https://unpkg.com/real-turtle"></script>
-  <script src = "https://unpkg.com/real-turtle/build/helpers/simple.js"></script>
-  <script>
-    // 여기서 시작
-    turtle
-      .left(90)
-    for(let j = 0; j < 10; j++) {
-      for(let i = 0; i < 8; i++){
-      turtle
-        .forward(100)
-        .right(45)
-    }
-    turtle
-      .right(36)
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex-67</title>
+  </head>
+  <body>
+    <!-- 그림이 그려질 영역 -->
+    <!-- 그래픽을 그리기 위한 수단으로 사용 -->
+    <canvas id="real-turtle"></canvas>
+    <script src="https://unpkg.com/real-turtle"></script>
+    <script src="https://unpkg.com/real-turtle/build/helpers/simple.js"></script>
+    <script>
+      // 여기서 시작
+      turtle.left(90);
+      for (let j = 0; j < 10; j++) {
+        for (let i = 0; i < 8; i++) {
+          turtle.forward(100).right(45);
+        }
+        turtle.right(36);
+      }
     </script>
-  
-</body>
+  </body>
 </html>
