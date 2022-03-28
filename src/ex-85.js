@@ -23,4 +23,4 @@ for (const i of convertName) {
   // }
 }
 
-console.log(count);
+console.log(`이름의 모음 개수는 ${count}) 입니다`);

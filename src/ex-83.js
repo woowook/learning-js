@@ -26,6 +26,7 @@ import { question } from 'readline-sync';
 /* eslint no-constant-condition: ["error", { "checkLoops": false }] */
 while (true) {
   const message = question('대문자로 메시지를 입력하세요 : ');
+  // 문자열 내 공백 문자 제거
   const replaceMessage = message.replace(/(\s*)/g, '');
 
   if (replaceMessage === replaceMessage.toUpperCase()) {
