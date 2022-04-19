@@ -11,4 +11,6 @@ const endPosition = Number(question('끝 위치를 입력하세요 : '));
 
 // 문자열 자르기
 // str.slice(start, end)
-console.log(poem.slice(startPosition - 1, endPosition + 1 - startPosition));
+console.log(poem.slice(startPosition - 1, endPosition + 1));
+
+// 다시 확인

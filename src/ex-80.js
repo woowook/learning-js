@@ -19,3 +19,5 @@ console.log(`사용자의 이름은 ${name} 이고 길이는 ${name.length} 입�
 // Str.concat(str1, str2, ....)
 const name1 = fname.concat(' ', lname);
 console.log(`사용자의 이름은 ${name1} 이고 길이는 ${name1.length} 입니다.`);
+
+// 다시 확인

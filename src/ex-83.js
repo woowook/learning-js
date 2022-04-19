@@ -27,6 +27,7 @@ import { question } from 'readline-sync';
 while (true) {
   const message = question('대문자로 메시지를 입력하세요 : ');
   // 문자열 내 공백 문자 제거
+
   const replaceMessage = message.replace(/(\s*)/g, '');
 
   if (replaceMessage === replaceMessage.toUpperCase()) {
@@ -36,3 +37,5 @@ while (true) {
     console.log('메시지에 소문자로 입력하셨습니다.');
   }
 }
+
+// 정규식 확인
