@@ -17,8 +17,14 @@ const inputNumber = Number(question('배열 안의 숫자를 하나 입력하세
 //   return accu;
 // }, {});
 // console.log(result);
-
-// filter() 배열의 모든 요소를 순회하여 조건에 부합하는 데이터를 모아서 새로운 배열을 반환
+// reduce 콜백함수는 배열안의 모든 요소 호출, 리턴되는 값은 함께 누적된 결과값을 리턴함
+// const result1 = number.reduce((preValue, curValue) => {
+//   console.log('-------------');
+//   console.log(preValue);
+//   return curValue;
+// });
+// console.log(result1);
+// Filter() 배열의 모든 요소를 순회하여 조건에 부합하는 데이터를 모아서 새로운 배열을 반환
 const result = number.filter((item) => item === inputNumber);
 console.log(`입력한 값은 숫자가 배열 안에 ${result.length}개 있습니다.`);
 
