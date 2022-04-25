@@ -23,6 +23,6 @@ fs.readFile('./src/Names1.txt', 'utf-8', function (error) {
   if (error) {
     console.log('error');
   } else {
-    console.log(data);
+    console.log('잘된걸로..');
   }
 });

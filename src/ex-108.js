@@ -4,18 +4,23 @@
 import fs from 'node:fs';
 import { question } from 'readline-sync';
 
-fs.readFile('./src/Names.txt', 'utf-8', function (error, data) {
+fs.readFile('./src/Names.txt', 'utf-8', function (error) {
   if (error) {
     console.log('error');
   } else {
-    console.log(data);
+    // Console.log(data);
   }
 });
 
 const name = question('추가할 이름을 입력하세요 : ');
 const data = `\n${name}`;
-fs.appendFile('./src/Names.txt', data, 'utf-8', function (error) {
-  if (error) {
-    console.log('error');
-  }
-});
+// Fs.appendFile('./src/Names.txt', data, 'utf-8', function (error) {
+//   if (error) {
+//     console.log('error');
+//   }
+// });
+
+fs.appendFileSync('./src/Names.txt', data, 'utf-8');
+
+const text = fs.readFileSync('./src/Names.txt', 'utf8');
+console.log('\n' + text);
