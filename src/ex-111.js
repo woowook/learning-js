@@ -7,35 +7,30 @@
 // 3  The Man Who Mistook His Wife for a Hat      Oliver Sacks                   1985
 // 4  Pride and Prejudice                         Jane Austen                    1813
 
-// Import fs from 'node:fs';
+import fs from 'node:fs';
 
-// JSON 배열 객체
-const books = [
-  {
-    Title: 'To Kill A Mockingbird',
-    Author: 'Harper Lee',
-    'Publication Date': '1960',
-  },
-  {
-    Title: 'A Brief History of Time',
-    Author: 'Stephen Hawking',
-    'Publication Date': '1988',
-  },
-  {
-    Title: 'The Great Gatsby',
-    Author: 'F. Scott Fitzgerald',
-    'Publication Date': '1922',
-  },
-  {
-    Title: 'The Man Who Mistook His Wife for a Hat',
-    Author: 'Oliver Sacks',
-    'Publication Date': '1985',
-  },
-  {
-    Title: 'Pride and Prejudice',
-    Author: 'Jane Austen ',
-    'Publication Date': '1813',
-  },
-];
+let books = 'Title, Author, Publication Date\n';
+books += 'To Kill A Mockingbird, Harper Lee, 1960\n';
+books += 'A Brief History of Time, Stephen Hawking, 1988\n';
+books += 'The Great Gatsby, F. Scott Fitzgerald, 1922\n';
+books += 'The Man Who Mistook His Wife for a Hat, Oliver Sacks, 1985\n';
+books += 'Pride and Prejudice, Jane Austen, 1813';
 
-console.log(books);
+// Const books1 = [
+//   // ['Title', 'Author', 'Publication Date'],
+//   ['To Kill A Mockingbird', 'Harper Lee', '1960'],
+//   ['A Brief History of Time', 'Stephen Hawking', '1988'],
+//   ['The Great Gatsby', 'F. Scott Fitzgerald', '1922'],
+//   ['The Man Who Mistook His Wife for a Hat', 'Oliver Sacks', '1985'],
+//   ['Pride and Prejudice', 'Jane Austen', '1813'],
+// ];
+
+// const data = books1.toString().split('\n');
+
+fs.writeFile('./src/books.csv', books, 'utf-8', function (error) {
+  if (error) {
+    console.log('error');
+  } else {
+    console.log('파일 생성 완료');
+  }
+});
