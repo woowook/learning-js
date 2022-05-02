@@ -13,7 +13,7 @@ fs.readFile('./src/books.csv', 'utf-8', function (error) {
 });
 
 const title = question('제목을 입력해주세요 : ');
-const author = question('작가를 입력해주세요 : ');
+const author = question('저자를 입력해주세요 : ');
 const date = question('발행년도를 입력해주세요 : ');
 const data = `\n${title}, ${author}, ${date}`;
 
