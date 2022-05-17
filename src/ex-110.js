@@ -8,7 +8,7 @@ import { question } from 'readline-sync';
 const names = fs.readFileSync('./src/Names.txt').toString().split('\n');
 console.log(names);
 
-const name = question('목록의 이름 중 하나를 입력하세요 : ');
+const name = question('목록의 이름 중 하나를 입력하세요  : ');
 let newNames = '';
 
 for (const element of names) {
