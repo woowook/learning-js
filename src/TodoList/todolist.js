@@ -18,6 +18,7 @@ function paintToDo(toDo) {
   toDos.append(li);
 }
 
+//
 function createToDo(event) {
   event.preventDefault();
   const toDo = toDoInput.value;
