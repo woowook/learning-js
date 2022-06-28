@@ -16,6 +16,7 @@ function loadToDoList() {
   // https://developer.mozilla.org/ko/docs/Web/API/Window/localStorage
   const loadedToDoList = localStorage.getItem(TODOLIST);
   if (loadedToDoList !== null) {
+    // JSON.parse - String 객체를 json 객체로 변환
     const parsedToDoList = JSON.parse(loadedToDoList);
     for (const toDo of parsedToDoList) {
       const { text } = toDo;
@@ -26,6 +27,10 @@ function loadToDoList() {
 }
 
 function saveToDoList() {
+  // 브라우저에 key-value 값을 storage에 저장
+  // setItem(key, value) - 아이템 추가
+  // getItem(key) - 아이템을 읽기 위해 사용
+  // JSON.stringify - json 객체를 String 객체로 변환
   localStorage.setItem(TODOLIST, JSON.stringify(toDoList));
 }
 
